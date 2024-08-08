@@ -1,6 +1,11 @@
 .site-navigation {
   margin-top: 2rem;
   padding: 0 1rem;
+
+  a {
+    color: #FFFFFF !important; /* White color for menu items */
+  }
+
   &:hover,
   &:focus-within {
     a {
@@ -21,8 +26,10 @@
   font-size: .875em;
   font-variant: small-caps;
   margin: 0;
+
   &.active a {
     text-decoration: underline;
+    color: #000000 !important; /* Red color for active menu item */
   }
 }
 
@@ -30,9 +37,12 @@
   display: block;
   padding: .25em .5em;
   text-decoration: none;
-  transition: opacity .125s ease-in-out;
+  color: #FFFFFF !important; /* White color for all links */
+  transition: opacity .125s ease-in-out, color .125s ease-in-out;
+
   &:hover,
   &:focus {
     opacity: 1;
+    color: #FF0000 !important; /* Red color on hover */
   }
 }
