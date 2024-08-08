@@ -24,6 +24,7 @@ icon: /assets/images/watermelon-background-6712110_1920.png
 twitter_username: 
 github_username: thezine-uva
 show_excerpts: false
+ignore_theme_config: true
 
 # Build settings
 markdown: kramdown
