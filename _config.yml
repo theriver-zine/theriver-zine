@@ -18,7 +18,7 @@ remote_theme: hitchens-theme
 email: thezine@protonmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   In solidarity with Palestine
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/zine" # the subpath of your site, e.g. /blog
 url: "https://thezine-uva.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 icon: /assets/images/watermelon-background-6712110_1920.png
 twitter_username: 
