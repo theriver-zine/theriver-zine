@@ -1,0 +1,100 @@
+---
+---
+
+@charset "utf-8";
+
+$asset_url: '{{ '/assets' | absolute_url }}';
+
+/* Import statements */
+@import 
+  "reset",
+  "variables",
+  "syntax-highlighting",
+  "mixins",
+  "font",
+  "base",
+  "masthead",
+  "menu",
+  "post-list",
+  "article",
+  "footnotes",
+  "search"
+;
+
+body {
+  font-family: 'Kufam', sans-serif;
+}
+
+/* Home Page Styling */
+body.home-page {
+  background: repeating-linear-gradient(
+    90deg,
+    #000000, /* Black stripe */
+    #000000 33.33%,
+    #FF0000 33.33%, /* Red stripe starts */
+    #FF0000 66.66%, /* Red stripe ends */
+    #006400 66.66%, /* Green stripe starts */
+    #006400 100% /* Green stripe ends */
+  ) !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  color: #000000 !important; /* Black text by default */
+}
+
+/* Vertical Palestinian Flag Stripes for Post Pages */
+body.post-page {
+  background: repeating-linear-gradient(
+    90deg,
+    #000000, /* Black stripe */
+    #000000 33.33%,
+    #FF0000 33.33%, /* Red stripe starts */
+    #FF0000 66.66%, /* Red stripe ends */
+    #006400 66.66%, /* Green stripe starts */
+    #006400 100% /* Green stripe ends */
+  ) !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  color: #000000 !important; /* Black text by default */
+}
+
+/* Title and Description Styling for Home Page */
+body.home-page .site-title {
+  color: #FFFFFF !important; /* White for the title */
+}
+
+body.home-page .site-description {
+  color: #FFFFFF !important; /* White for the description */
+  font-size: 2.5rem; /* Adjust the size as needed */
+}
+
+/* Headings and Links Styling */
+h1, h2, h3, h4, h5, h6, a {
+  color: #000000 !important; /* Black for headings and links */
+}
+
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, a:hover {
+  color: #FF0000 !important; /* Red on hover for headings and links */
+}
+
+/* Post Titles and Content Styling */
+body.post-page .post-title {
+  color: #000000 !important; /* Black for post titles */
+}
+
+body.post-page .post-title:hover {
+  color: #FF0000 !important; /* Red on hover for post titles */
+}
+
+/* Style the main content section */
+#main {
+  background-color: #FFFFFF !important; /* Solid white background */
+  border: 10px solid #FFFFFF !important; /* Thick white border */
+  padding: 20px !important;
+  margin: 20px auto !important;
+  max-width: 800px !important;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2) !important;
+  z-index: 1 !important;
+  position: relative !important;
+}
