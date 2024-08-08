@@ -31,10 +31,10 @@ body.home-page {
     90deg,
     #000000, /* Black stripe */
     #000000 33.33%,
-    #FF0000 33.33%, /* Red stripe starts */
-    #FF0000 66.66%, /* Red stripe ends */
-    #006400 66.66%, /* Green stripe starts */
-    #006400 100% /* Green stripe ends */
+    #ff545e 33.33%, /* Red stripe starts */
+    #ff545e 66.66%, /* Red stripe ends */
+    #95e3bb 66.66%, /* Green stripe starts */
+    #95e3bb 100% /* Green stripe ends */
   ) !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
@@ -48,10 +48,10 @@ body.post-page {
     90deg,
     #000000, /* Black stripe */
     #000000 33.33%,
-    #FF0000 33.33%, /* Red stripe starts */
-    #FF0000 66.66%, /* Red stripe ends */
-    #006400 66.66%, /* Green stripe starts */
-    #006400 100% /* Green stripe ends */
+    #ff545e 33.33%, /* Red stripe starts */
+    #ff545e 66.66%, /* Red stripe ends */
+    #95e3bb 66.66%, /* Green stripe starts */
+    #95e3bb 100% /* Green stripe ends */
   ) !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
@@ -66,7 +66,7 @@ body.home-page .site-title {
 
 body.home-page .site-description {
   color: #FFFFFF !important; /* White for the description */
-  font-size: 2.5rem; /* Adjust the size as needed */
+  font-size: 2.5rem; /* Consider using rem units here for better scalability */
 }
 
 /* Headings and Links Styling */
@@ -81,20 +81,40 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, a:hover {
 /* Post Titles and Content Styling */
 body.post-page .post-title {
   color: #000000 !important; /* Black for post titles */
+  margin-bottom: 0em !important; /* Reduce space below the title */
+  padding: 0em;
 }
 
 body.post-page .post-title:hover {
   color: #FF0000 !important; /* Red on hover for post titles */
 }
 
+body.post-page .post-content p:first-of-type {
+  margin-top: 0.5em !important; /* Optional: Reduce space above the first paragraph */
+  padding: 0.5em;
+}
+
 /* Style the main content section */
 #main {
-  background-color: #FFFFFF !important; /* Solid white background */
-  border: 10px solid #FFFFFF !important; /* Thick white border */
-  padding: 20px !important;
-  margin: 20px auto !important;
-  max-width: 800px !important;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2) !important;
+  background-color: rgba(255, 255, 255, 0.9) !important; /* Transparent white background */
+  border: 1em #FFFFFF !important; /* Fixed the border syntax */
+  padding: 2em !important; /* Use em for padding to scale with text */
+  margin: 5% auto !important; /* Use percentage for margin to allow flexibility */
+  max-width: 25% !important; /* Use percentage for max-width to be more fluid */
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.2) !important; /* Use em for consistent shadow scaling */
   z-index: 1 !important;
   position: relative !important;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+  body.home-page .site-title,
+  body.home-page .site-description {
+    font-size: 2rem; /* Scale down the font size on smaller screens */
+  }
+  
+  #main {
+    padding: 1.5em !important; /* Adjust padding on smaller screens */
+    max-width: 95% !important; /* Make content more fluid on small screens */
+  }
 }
