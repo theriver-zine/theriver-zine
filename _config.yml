@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: The Zine
-theme: hitchens-theme
+remote_theme: hitchens-theme
 email: thezine@protonmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   In solidarity with Palestine
@@ -28,15 +28,6 @@ ignore_theme_config: false
 
 # Build settings
 markdown: kramdown
-
-# Collections settings
-collections:
-  zine1:
-    output: true
-    permalink: /zine1/:path/
-  zine2:
-    output: true
-    permalink: /zine2/:path/
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
