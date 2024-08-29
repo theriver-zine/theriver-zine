@@ -13,16 +13,16 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: The Zine
+title: The River
 remote_theme: hitchens-theme
-email: thezine@protonmail.com
+email: theriverzine@proton.me
 description: >- # this means to ignore newlines until "baseurl:"
   In solidarity with Palestine
 baseurl: "/zine" # the subpath of your site, e.g. /blog
-url: "https://thezine-uva.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://theriver-zine.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 icon: /assets/images/watermelon-background-6712110_1920.png
 twitter_username: 
-github_username: thezine-uva
+github_username: theriver-zine
 show_excerpts: false
 ignore_theme_config: false
 
