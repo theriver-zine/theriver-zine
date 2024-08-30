@@ -1,8 +1,8 @@
+- title: Home
+  url: /index.html
+
 - title: About
   url: /about.html
-
-- title: Issues
-  url: /archive.html
 
 - title: Source
   url: https://github.com/theriver-zine/theriver-zine

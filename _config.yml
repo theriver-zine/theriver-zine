@@ -19,7 +19,7 @@ email: theriverzine@proton.me
 description: >- # this means to ignore newlines until "baseurl:"
   A zine in solidarity with Palestine
 baseurl: "/theriver-zine" # the subpath of your site, e.g. /blog
-url: "https://theriver-zine.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://theriverzine.nl" # the base hostname & protocol for your site, e.g. http://example.com
 icon: /assets/images/watermelon-background-6712110_1920.png
 twitter_username: 
 github_username: theriver-zine
