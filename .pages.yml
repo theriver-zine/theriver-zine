@@ -1,5 +1,5 @@
 # General configuration for Pages CMS
-media: assets/media
+media: assets/images
 
 content:
   - name: posts
