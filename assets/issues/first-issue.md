@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "View the Latest Issue"
-categories: issues
-tags: august2024
+title: Issues
 ---
 
 ## Embedded PDF

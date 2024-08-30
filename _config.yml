@@ -25,6 +25,11 @@ twitter_username:
 github_username: theriver-zine
 show_excerpts: false
 ignore_theme_config: false
+collections:
+  issues:
+    output: true
+    permalink: /assets/issues/:path/
+    folder: /assets/issues/
 
 # Build settings
 markdown: kramdown
@@ -43,6 +48,19 @@ markdown: kramdown
 
 plugins:
   - jekyll-paginate
+  - jekyll-archives
+
+# Jekyll Archives configuration
+jekyll-archives:
+  enabled: all
+  layouts:
+    year: archive/year
+    month: archive/month
+    day: archive/day
+    tag: archive/tag
+    category: archive/category
+  permalinks:
+    category: /categories/:name/
 
 paginate: 20
 paginate_path: "/page/:num/"
