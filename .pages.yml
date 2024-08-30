@@ -15,4 +15,4 @@ content:
     - {name: body, label: Body, type: rich-text}
   - name: issues
     path: assets/issues
-    type: file
+    type: collection
