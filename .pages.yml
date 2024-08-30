@@ -13,3 +13,6 @@ content:
     - {name: tags, type: string, hidden: true}
     - {name: image, label: Image, type: image}
     - {name: body, label: Body, type: rich-text}
+  - name: issues
+    path: assets/issues
+    type: file
