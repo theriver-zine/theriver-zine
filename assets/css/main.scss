@@ -26,15 +26,15 @@ body {
 }
 
 /* Home Page Styling */
-body.home-page {
+body.home-page, body.post-page {
   background: repeating-linear-gradient(
-    90deg,
+    90deg, /* Change to 180deg for horizontal stripes */
     #000000, /* Black stripe */
-    #000000 33.33%,
-    #ff545e 33.33%, /* Red stripe starts */
-    #ff545e 66.66%, /* Red stripe ends */
-    #95e3bb 66.66%, /* Green stripe starts */
-    #95e3bb 100% /* Green stripe ends */
+    #000000 33.33%, /* Black stripe ends */
+    #FF0000 33.33%, /* Red stripe starts */
+    #FF0000 66.66%, /* Red stripe ends */
+    #008000 66.66%, /* Green stripe starts */
+    #008000 100% /* Green stripe ends */
   ) !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
@@ -45,13 +45,13 @@ body.home-page {
 /* Vertical Palestinian Flag Stripes for Post Pages */
 body.post-page {
   background: repeating-linear-gradient(
-    90deg,
+    90deg, /* Change to 180deg for horizontal stripes */
     #000000, /* Black stripe */
-    #000000 33.33%,
-    #ff545e 33.33%, /* Red stripe starts */
-    #ff545e 66.66%, /* Red stripe ends */
-    #95e3bb 66.66%, /* Green stripe starts */
-    #95e3bb 100% /* Green stripe ends */
+    #000000 33.33%, /* Black stripe ends */
+    #FF0000 33.33%, /* Red stripe starts */
+    #FF0000 66.66%, /* Red stripe ends */
+    #008000 66.66%, /* Green stripe starts */
+    #008000 100% /* Green stripe ends */
   ) !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
