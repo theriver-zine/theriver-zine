@@ -1,1 +1,6 @@
 media: assets/images
+zine-issues: assets/issues
+content:
+name: posts
+label: Posts
+type: collection
