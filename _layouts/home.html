@@ -2,39 +2,29 @@
 layout: default
 ---
 
-  <!-- Include Kufam font from Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Kufam:wght@400;700&display=swap" rel="stylesheet">
+<!-- Include Kufam font from Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Kufam:wght@400;700&display=swap" rel="stylesheet">
 
-{% if site.data.menu and site.paginate and site.paginate_path and paginator.page > 1 %}
+<header class="site-masthead">
   {% include menu.html %}
-{% elsif site.paginate and site.paginate_path and paginator.page > 1 %}
-  {% include back-link.html %}
-{% else %}
-  <header class="site-masthead">
-    {% include menu.html %}
-    {% if site.title %}
-      <h1 class="site-title">
-        {{ site.title }}
-      </h1>
-    {% endif %}
-    {% if site.title %}
-      <h2 class="site-description">
-        {{ site.description }}
-      </h2>
-    {% endif %}
-  </header>
-{% endif %}
+  {% if site.title %}
+    <h1 class="site-title">
+      {{ site.title }}
+    </h1>
+  {% endif %}
+  {% if site.description %}
+    <h2 class="site-description">
+      {{ site.description }}
+    </h2>
+  {% endif %}
+</header>
 
 <main class="home" id="main" role="main" aria-label="Content">
   <h1 class="content-title divided page-title">
-    {% if site.paginate and site.paginate_path and paginator.page > 1 %}
-      Page {{ paginator.page }}
-    {% else %}
-      Contents
-    {% endif %}
+    Articles
   </h1>
 
-  {% if site.paginate and site.paginate_path %}
+  {% if paginator %}
     <ul class="post-list">
       {% for post in paginator.posts %}
         {% include post-list-item.html %}
@@ -44,7 +34,7 @@ layout: default
     {% if paginator.total_pages > 1 %}
       <div class="post-pagination">
         {% if paginator.next_page %}
-          <a href="{{ paginator.next_page_path | prepend: site.baseurl  }}" class="pagination-next btn">&lang;&nbsp;Older</a>
+          <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="pagination-next btn">&lang;&nbsp;Older</a>
         {% else %}
           <span>&nbsp;</span>
         {% endif %}

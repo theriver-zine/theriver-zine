@@ -1,0 +1,12 @@
+  #main {
+    padding: 1.5em !important; /* Adjust padding on smaller screens */
+    max-width: 70% !important; /* Make content more fluid on small screens */
+  }
+    main.home {
+    margin-top: 5vh; /* Adjust to push content below the triangle */
+    align-content: center;
+    align-items: center;
+    
+    
+  }
+} 

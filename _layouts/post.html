@@ -2,11 +2,19 @@
 layout: default
 ---
 
-{% if site.data.menu %}
+<header class="site-masthead">
   {% include menu.html %}
-{% else %}
-  {% include back-link.html %}
-{% endif %}
+  {% if site.title %}
+    <h1 class="site-title">
+      {{ site.title }}
+    </h1>
+  {% endif %}
+  {% if site.description %}
+    <h2 class="site-description">
+      {{ site.description }}
+    </h2>
+  {% endif %}
+</header>
 
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting" id="main" role="article" aria-label="Content">
   {% if page.title != "" %}
