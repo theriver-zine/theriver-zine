@@ -6,31 +6,27 @@ layout: default
 <link href="https://fonts.googleapis.com/css2?family=Kufam:wght@400;700&display=swap" rel="stylesheet">
 
 <header class="site-masthead">
-  {% include menu.html %}
-  {% if site.title %}
-    <h1 class="site-title">
-      {{ site.title }}
-    </h1>
-  {% endif %}
-  {% if site.description %}
-    <h2 class="site-description">
-      {{ site.description }}
-    </h2>
-  {% endif %}
+  <div class="content-wrapper">
+    {% include menu.html %}
+    {% if site.title %}
+      <h1 class="site-title">{{ site.title }}</h1>
+    {% endif %}
+    {% if site.description %}
+      <h2 class="site-description">{{ site.description }}</h2>
+    {% endif %}
+  </div>
 </header>
 
 <main class="home" id="main" role="main" aria-label="Content">
-  <h1 class="content-title divided page-title">
-    Articles
-  </h1>
-
+  <div class="content-wrapper">
+    <!-- Articles List -->
+    <h1 class="content-title divided page-title">Articles</h1>
   {% if paginator %}
     <ul class="post-list">
-      {% for post in paginator.posts %}
+      {% for post in site.posts %}
         {% include post-list-item.html %}
       {% endfor %}
     </ul>
-
     {% if paginator.total_pages > 1 %}
       <div class="post-pagination">
         {% if paginator.next_page %}

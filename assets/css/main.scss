@@ -31,7 +31,6 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, a:hover {
   color: #FF0000 !important; /* Red on hover for headings and links */
 }
 
-
 body {
   font-family: 'Kufam', sans-serif;
   background: 
@@ -51,6 +50,7 @@ body {
   position: relative;
 }
 
+/* Red Inverted Triangle Styling */
 body::before {
   content: "";
   position: absolute;
@@ -61,31 +61,38 @@ body::before {
   height: 0;
   border-left: 50vw solid transparent; 
   border-right: 50vw solid transparent; 
-  border-top: 80vh solid #FF0000; /* Increase the height of the triangle */
+  border-top: 80vh solid #FF0000; /* Adjust height of the triangle */
   z-index: 1;
 }
 
-header.site-masthead {
+
+/* Wrapper Styling to Ensure Consistent Positioning */
+.content-wrapper {
   position: relative;
+  z-index: 3; /* Content wrapper always above the triangle */
+}
+
+/* Masthead (Header) */
+header.site-masthead {
   text-align: center;
-  top: 0;
   z-index: 2;
 }
 
 header.site-masthead .site-title {
   color: #FFFFFF !important; /* White for the title */
-  font-size: 6rem; /* Adjust as needed */
+  font-size: 6rem;
 }
 
 header.site-masthead .site-description {
   color: #000000 !important; /* Black for the subtitle */
-  font-size: 1.5rem; /* Adjust as needed */
-  margin-top: 1rem; /* Adjust spacing between title and subtitle */
+  font-size: 1.5rem;
+  margin-top: 1rem;
 }
 
+/* Main Content (for home and post pages) */
 main.home, main.post-page {
   margin-top: 20vh; /* Adjust to start content further below the triangle */
-  z-index: 3; /* Ensure content appears above the triangle */
+  z-index: 2; /* Ensure content appears below the masthead but above the triangle */
   position: relative;
   text-align: center;
   color: #000000; /* Black text for contrast */
@@ -96,35 +103,30 @@ main.home, main.post-page {
   max-width: 80%; /* Constrain the width to avoid it being too large */
   width: 50%;
   border: none; /* Ensure no border is added */
+  position: relative; /* Ensure proper stacking order */
 }
 
-/* Styling for the post pages */
-body.post-page {
-  background: 
-    linear-gradient(
-      to right,
-      #008000 0%,    /* Green stripe */
-      #008000 33.33%,
-      #FFFFFF 33.33%, /* White stripe */
-      #FFFFFF 66.66%,
-      #000000 66.66%, /* Black stripe */
-      #000000 100%
-    );
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-  color: #000000 !important; /* Black text by default */
+/* Post title styling */
+.post-title.divided.p-name {
+  color: #000000 !important; /* Ensure the post title is black */
+  font-size: 3rem; /* Adjust the font size as needed */
+  margin-top: 2rem;
+  text-align: center; /* Center align the post title */
+  z-index: 3; /* Ensure the post title appears above everything */
+  position: relative; /* Ensure proper stacking order */
 }
 
+/* Post content (articles) styling */
 article.post {
-  background-color: rgba(255, 255, 255, 0.8); /* Light background for readability */
+  position: relative;
+  z-index: 3; /* Ensure article appears above the white background */
   padding: 2rem;
-  border-radius: 10px; /* Slight border radius for a softer look */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  max-width: 80%; /* Constrain the width to avoid it being too large */
-  margin: 3rem auto; /* Center the article on the page */
-  border: none; /* Ensure no border is added */
-  z-index: 3; /* Ensure article appears above the triangle */
+  background-color: rgba(255, 255, 255, 0.9); /* Transparent white background */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 80%;
+  margin: 3rem auto;
+  border: none;
 }
 
 /* Media Queries for Mobile */
@@ -141,7 +143,7 @@ article.post {
     margin-top: 5vh; /* Adjust to push content below the triangle */
     padding: 1.5em; /* Adjust padding on smaller screens */
     max-width: 80%; /* Make content more fluid on small screens */
-    z-index: 3; /* Make sure the main content appears above the triangle */
+    z-index: 3; /* Ensure the main content appears above the triangle */
     position: relative; /* Ensure proper positioning */
   }
 
@@ -154,18 +156,15 @@ article.post {
     padding-bottom: 5em;
   }
 
-  /* Additional adjustments if needed */
-  header.site-masthead .site-title {
-    margin-bottom: 1rem; /* Add some spacing below the title */
-  }
-
-  header.site-masthead .site-description {
-    margin-top: 0.5rem; /* Add some spacing above the subtitle */
-  }
-
   /* Ensure article (post) content is above the triangle */
   article.post {
     z-index: 3; /* Bring the post content above the triangle */
     position: relative;
+  }
+
+  /* Specific styling for post titles with "divided" and "p-name" */
+  .post-title.divided.p-name {
+    font-size: 2rem; /* Scale down the font size for mobile */
+    margin-top: 1rem;
   }
 }

@@ -3,38 +3,32 @@ layout: default
 ---
 
 <header class="site-masthead">
-  {% include menu.html %}
-  {% if site.title %}
-    <h1 class="site-title">
-      {{ site.title }}
-    </h1>
-  {% endif %}
-  {% if site.description %}
-    <h2 class="site-description">
-      {{ site.description }}
-    </h2>
-  {% endif %}
+  <div class="content-wrapper">
+    {% include menu.html %}
+    <h1 class="site-title">{{ site.title }}</h1>
+    <h2 class="site-description">{{ site.description }}</h2>
+  </div>
 </header>
 
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting" id="main" role="article" aria-label="Content">
-  {% if page.title != "" %}
+<main id="main-content" role="main" aria-label="Content">
+  <div class="content-wrapper">
+  <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
     <h1 class="post-title divided p-name" itemprop="name headline">
       {{ page.title }}
     </h1>
-  {% endif %}
 
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
-  </div>
+    <div class="post-content e-content" itemprop="articleBody">
+      {{ content }}
+    </div>
 
-  <div class="post-meta">
-    {% if page.author %}
+    <div class="post-meta">
       <div itemprop="author">{{ page.author }}</div>
-    {% endif %}
-    <time class="post-date dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %-d, %Y" }}</time>
-  </div>
+      <time class="post-date dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %-d, %Y" }}</time>
+    </div>
 
-  {% if site.disqus.shortname %}
-    {% include disqus-comments.html %}
-  {% endif %}
-</article>
+    {% if site.disqus.shortname %}
+      {% include disqus-comments.html %}
+    {% endif %}
+  </div>
+  </article>
+</main>
