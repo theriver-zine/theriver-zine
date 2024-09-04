@@ -1,7 +1,7 @@
 ---
 title: View the Latest Issue
 layout: post
-date: 2024-09-04
+date: 2024-09-03
 categories: issues
 tags: september2024
 ---
