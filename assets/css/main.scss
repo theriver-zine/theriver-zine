@@ -37,10 +37,10 @@ body {
     linear-gradient(
       to right,
       #008000 0%,    /* Green stripe */
-      #008000 33.33%,
-      #FFFFFF 33.33%, /* White stripe */
-      #FFFFFF 66.66%,
-      #000000 66.66%, /* Black stripe */
+      #008000 25%,
+      #FFFFFF 25%, /* White stripe */
+      #FFFFFF 75%,
+      #000000 75%, /* Black stripe */
       #000000 100%
     );
   background-size: cover;
@@ -101,7 +101,7 @@ main.home, main.post-page {
   border-radius: 10px; /* Slight border radius for a softer look */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   max-width: 80%; /* Constrain the width to avoid it being too large */
-  width: 50%;
+  width: 65%;
   border: none; /* Ensure no border is added */
   position: relative; /* Ensure proper stacking order */
 }
